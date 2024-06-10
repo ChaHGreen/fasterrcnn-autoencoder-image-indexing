@@ -262,28 +262,38 @@ process_and_display_image(image_path, frame_infos)
 
 1. Cropped image from `Video 1`
 	- Query Image
+
 		![img1](result_img/vid1_1.png)
 	- Top 10 matches  
+
 		![img2](result_img/vid1_2.png)
 
 2. Cropped image from `Video 2`
 	- Query Image
+
 		![img3](result_img/vid2_1.png)
 	- Top 10 matches
+
 		![img4](result_img/vid2_2.png)
 3. Cropped image from `Video 3`
 	- Query Image
+
 		![img4](result_img/vid3_1.png)
 	- Top 10 matches
+
 		![img5](result_img/vid3_2.png)
 
 4. Query Image from `Internet`
 	- Query Image
+
 		![img5](result_img/int1_1.png)
 	- Top 10 matches
+
 		![img6](result_img/int1_2.png)
 5. Query Image from `Internet`
 	- Query Image
+
 		![img6](result_img/int2_1.png)
 	- Top 10 matches
+	
 		![img7](result_img/int2_2.png)
