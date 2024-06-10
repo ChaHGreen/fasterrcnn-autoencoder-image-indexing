@@ -259,34 +259,31 @@ process_and_display_image(image_path, frame_infos)
 
 ## Result Display
 
+
 1. Cropped image from `Video 1`
 	- Query Image
-		
-		![[Pasted image 20240301192700.png|300]]
-	- Top 10 matches
-		![[Pasted image 20240301192732.png|700]]
+		![img1](result_img/vid1_1.png)
+	- Top 10 matches  
+		![img2](result_img/vid1_2.png)
 
 2. Cropped image from `Video 2`
 	- Query Image
-		
-		![[Pasted image 20240302181153.png|300]]
+		![img3](result_img/vid2_1.png)
 	- Top 10 matches
-		![[Pasted image 20240302181210.png|700]]
+		![img4](result_img/vid2_2.png)
 3. Cropped image from `Video 3`
 	- Query Image
-		
-		![[Pasted image 20240301192754.png|300]]
+		![img4](result_img/vid3_1.png)
 	- Top 10 matches
-		![[Pasted image 20240302181608.png|700]]
+		![img5](result_img/vid3_2.png)
 
 4. Query Image from `Internet`
 	- Query Image
-		
-		![[Pasted image 20240302165748.png|300]]
-	- Top 10 matches![[Pasted image 20240302171428.png|700]]
+		![img5](result_img/int1_1.png)
+	- Top 10 matches
+		![img6](result_img/int1_2.png)
 5. Query Image from `Internet`
 	- Query Image
-		
-		![[Pasted image 20240302181431.png|300]]
+		![img6](result_img/int2_1.png)
 	- Top 10 matches
-		![[Pasted image 20240302181546.png|700]]
+		![img7](result_img/int2_2.png)
