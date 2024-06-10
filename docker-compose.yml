@@ -1,0 +1,58 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.pytorch
+    container_name: video_container
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/assignment
+    volumes:
+      - E:\NYU CS\AI\CSGY6613-Assignment\Video Search:/workspaces/artificial_intelligence
+    ports:
+      - "8888:8888"    
+    networks:
+      - app-network
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+    ipc: host
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    depends_on:
+      db:
+        condition: service_healthy
+    command: tail -f /dev/null
+
+  db:
+    # image: mypostgres:pgvector
+    image: pgvector/pgvector:pg16
+    container_name: video_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=assignment
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    healthcheck:
+      test: pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    expose:
+      - 54321
+    ports:
+      - 54321:5432
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
